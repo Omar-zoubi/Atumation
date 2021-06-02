@@ -38,13 +38,10 @@ with open('potential-contacts.txt') as file :
     for j in range(len( unique_phone)): 
         unique_phone[j]= re.sub('^000', '206', unique_phone[j])
         
-
-
     for j in range(len( unique_phone)): 
         unique_phone[j] = re.sub(r'(\d{3})(\d{3})(\d{4})', r'\1- \2-\3', str(unique_phone[j]))
         # print(j)
          
-
     unique_phone.sort()
     unique_email.sort()
     print(unique_phone)
